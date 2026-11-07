@@ -28,7 +28,7 @@ The canonical Golden Path work model is Product `Outcome → Bet → Initiative 
 
 - **Ownership:** Product and Engineering for new end-user capabilities; Engineering for the bounded tooling/CI tasks once product boundaries are accepted.
 - **Readiness:** DEFINITION; not implementation-ready until RFC/ADR decisions and acceptance criteria reviewed.
-- **Project:** None currently authorized in adopter manifest. Establish Project ownership first and validate native parent relations.
+- **Project:** `nomed/7` selected by the owner and declared in the PR manifest. Project access, fields, views and native parent relations require independent verification before materialization.
 - **Harness:** Claims, registration and integration/promotion remain disabled until separately selected, protected and verified.
 - **Initial milestone candidate:** v0.1 feasibility (not committed).
 - **Evidence:** Synthetic data only for public issues and CI fixtures.

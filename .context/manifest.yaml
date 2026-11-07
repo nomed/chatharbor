@@ -1,8 +1,12 @@
 schema_version: 1
 context_root: .context
+repository: nomed/chatharbor
+golden_path:
+  contract_ref: 7d4d17ad2aff5bbb9eddc688ec9b4bd46c11e316
 
 work_management:
   system_of_record: github
+  connector_manifest: .golden-path/github-work-model.json
   live_work_state_in_context: false
 
 precedence:
