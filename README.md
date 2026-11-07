@@ -37,3 +37,7 @@ MIT — see [LICENSE](./LICENSE). The Nomed name and brand artwork are not grant
 
 ---
 Built under [Nomed](https://nomed.github.io/). Not affiliated with WhatsApp or Meta.
+
+## Executable kickoff
+
+The native backlog starts at [Outcome #2](https://github.com/nomed/chatharbor/issues/2), through [Bet #3](https://github.com/nomed/chatharbor/issues/3) and [Initiative #4](https://github.com/nomed/chatharbor/issues/4). Project #7 access is blocked; canonical Project classification is not activated. See [iOS foundation preview](ios/README.md), [delivery controls](.context/standards/engineering-delivery.md) and [kickoff evidence](.context/evidence/2026-11-07-kickoff.md). The app scaffold is not a qualified MVP; proposed decisions and human security/device gates remain open.
