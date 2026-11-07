@@ -33,7 +33,9 @@
     "security"
   ],
   "allowRootBugs": true,
-  "authorizedProjects": [],
+  "authorizedProjects": [
+    "nomed/7"
+  ],
   "executionClaims": {
     "enabled": false,
     "protocol": "git_atomic_claims_v1",
