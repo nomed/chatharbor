@@ -1,0 +1,46 @@
+name: iOS foundation
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  swift-and-simulator:
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.0.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Record selected toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+      - name: Test archive integrity and authenticated encryption
+        run: CHATHARBOR_DRILL_OUTPUT="$RUNNER_TEMP/drill" swift test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independent restore on Python, without app or source phone
+        run: |
+          python3 -m venv "$RUNNER_TEMP/restore-env"
+          "$RUNNER_TEMP/restore-env/bin/pip" install -r tools/requirements-restore.txt
+          "$RUNNER_TEMP/restore-env/bin/python" -m unittest discover -s tools -p 'test_*.py'
+          "$RUNNER_TEMP/restore-env/bin/python" tools/restore_vault.py "$RUNNER_TEMP/drill/synthetic.vault" --key-file "$RUNNER_TEMP/drill/synthetic.recovery-key" --output "$RUNNER_TEMP/restored"
+      - name: Generate app and extension project
+        run: |
+          brew install xcodegen
+          xcodegen --version
+          cd ios
+          xcodegen generate
+      - name: Build unsigned simulator app and Share Extension
+        run: xcodebuild -project ios/ChatHarbor.xcodeproj -scheme ChatHarbor -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath "$RUNNER_TEMP/DerivedData" CODE_SIGNING_ALLOWED=NO build
+      - name: Bounded repository governance
+        run: python3 scripts/check-governance.py

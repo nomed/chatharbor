@@ -1,0 +1,192 @@
+{
+  "repository": "nomed/chatharbor",
+  "projectFieldState": "blocked-access; intended classifications in issue bodies only",
+  "issues": [
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnF0g",
+      "number": 2,
+      "title": "Outcome: Preserve conversations independently and prepare group continuity",
+      "parent": null,
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnJWQ",
+      "number": 3,
+      "title": "Bet: User exports and independent recovery contacts provide practical resilience",
+      "parent": {
+        "number": 2
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnMwA",
+      "number": 4,
+      "title": "Initiative: Deliver the ChatHarbor v0.1 recovery vertical slice",
+      "parent": {
+        "number": 3
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnPKA",
+      "number": 5,
+      "title": "Epic: Conversation Archive",
+      "parent": {
+        "number": 4
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnRnw",
+      "number": 6,
+      "title": "Epic: Group & Community Recovery",
+      "parent": {
+        "number": 4
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnUMw",
+      "number": 7,
+      "title": "Epic: Security, Backup & Restore",
+      "parent": {
+        "number": 4
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnWmg",
+      "number": 8,
+      "title": "Epic: iOS Engineering Foundation",
+      "parent": {
+        "number": 4
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnZjQ",
+      "number": 9,
+      "title": "Task: Qualify synthetic WhatsApp exports, locales, truncation and media",
+      "parent": {
+        "number": 5
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWncAw",
+      "number": 10,
+      "title": "Feature: Import user-shared source files into a verifiable immutable archive",
+      "parent": {
+        "number": 5
+      },
+      "blockedBy": {
+        "nodes": [
+          {
+            "number": 12
+          },
+          {
+            "number": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWne0A",
+      "number": 11,
+      "title": "Feature: Maintain a private Group Recovery Registry",
+      "parent": {
+        "number": 6
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnhXg",
+      "number": 12,
+      "title": "Task: Qualify Swift toolchain, archive core, Share Extension and initial CI",
+      "parent": {
+        "number": 8
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnj7w",
+      "number": 13,
+      "title": "Feature: Export encrypted external Vault and restore without source phone",
+      "parent": {
+        "number": 7
+      },
+      "blockedBy": {
+        "nodes": [
+          {
+            "number": 12
+          }
+        ]
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnmKA",
+      "number": 14,
+      "title": "Gate: Review privacy, threat model and independent recovery drill",
+      "parent": {
+        "number": 7
+      },
+      "blockedBy": {
+        "nodes": [
+          {
+            "number": 13
+          },
+          {
+            "number": 11
+          },
+          {
+            "number": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWno1Q",
+      "number": 15,
+      "title": "Task: Complete Project-owned fields, views and canonical Work Type activation",
+      "parent": {
+        "number": 8
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "I_kwDOVmf9LM8AAAABdWnrQg",
+      "number": 16,
+      "title": "Task: Review engineering controls and merge authority before enforcement",
+      "parent": {
+        "number": 8
+      },
+      "blockedBy": {
+        "nodes": []
+      }
+    }
+  ],
+  "nativeParentsVerified": 14,
+  "nativeDependenciesVerified": 6
+}
