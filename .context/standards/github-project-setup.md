@@ -10,7 +10,7 @@
 - Adopter manifest: `.golden-path/github-work-model.json`
 - Selected Project: [nomed/7](https://github.com/users/nomed/projects/7/views/1), provided by the repository owner.
 - Proposed `authorizedProjects`: `["nomed/7"]` — recorded in PR #1; not yet merged into `main`.
-- No GitHub Project API, project-field mutation or native parent/sub-issue operation is currently exposed by the connected GitHub integration.
+- The connected repository tool surface lacks Project administration; the authenticated CLI can reach GitHub outside the sandbox, but Project #7 currently returns `Resource not accessible by integration (user.projectV2)`. See the dated review in `.context/evidence/2026-11-07-project-review.md`.
 
 ## One-time Project configuration
 
@@ -40,7 +40,7 @@ The Project model and field options must be taken from the pinned upstream JSON,
 
 ## Permission and recovery boundary
 
-Project provisioning and hierarchy mutation require a verified, compatible connector or an authenticated GitHub CLI/API transport with the correct permissions. The current ChatGPT GitHub connection exposes repository Issues but does not provide the Project v2 mutations needed for canonical adoption. Do **not** create flat Issues and merely claim parenthood in their bodies.
+Project provisioning and hierarchy mutation require a verified, compatible connector or an authenticated GitHub CLI/API transport with the correct permissions. The CLI identity is verified as `nomed`; Project access is blocked for the current integration. The native Issue API schema supports hierarchy and dependency fields, but write/read-back qualification is still pending. Do **not** create flat Issues and merely claim parenthood in their bodies.
 
 ## Verification before declaring active
 
@@ -51,7 +51,7 @@ Project provisioning and hierarchy mutation require a verified, compatible conne
 - [ ] Native parent links round-tripped successfully.
 - [ ] Product and Engineering ownership classification documented for all work.
 - [ ] Canonical plan digest/authorization and post-state comparison recorded.
-- [ ] Official Golden Path adoption/status report run from the pinned runtime.
+- [x] Official scoped Golden Path adoption/status report run from the pinned runtime; this does not certify Project conformance.
 - [ ] Actual enforcement distinguished from mere configuration.
 
 Until these checks pass, status remains **planned / not activated**.

@@ -26,7 +26,7 @@
 
 | Capability | Declared | Observed / enforced |
 | --- | --- | --- |
-| Repository context (`AGENTS.md`, manifest, ADR/RFC) | Proposed | Files in draft PR; no official status report |
+| Repository context (`AGENTS.md`, manifest, ADR/RFC) | Proposed | Official scoped report collected on PR commit `3c03190`; declarations only |
 | Issue governance / GitHub Project Work Type | Proposed | Selected `nomed/7` in draft manifest; fields and native hierarchy unverified |
 | Product-to-Engineering traceability | Proposed | Work graph only; no native issue hierarchy |
 | Context routing | Deferred | Not operational |
@@ -46,7 +46,7 @@
 
 ## Evidence gaps
 
-- No official toolchain doctor, schema-validator receipt or adoption/status report has been produced.
+- An official isolated runtime and scoped adoption/status report now exist; the full GitHub manifest schema was validated by the pinned connector. See `.context/evidence/2026-11-07-project-review.md` for commands and limits. This does not prove Project or Harness conformance.
 - Project `nomed/7` selected by owner and recorded on draft branch; no Project API inspection, native Work Type/parent hierarchy or work-item mapping verified.
 - No protected coordination registry; no branch protections or PR gate qualification.
 - A public contributor cannot inspect the private upstream contracts; ChatHarbor's local rules remain usable independent of those private materials.
