@@ -1,0 +1,31 @@
+name: Governance bootstrap checks
+
+on:
+  pull_request:
+    paths:
+      - '.context/**'
+      - '.golden-path/**'
+      - 'AGENTS.md'
+      - 'scripts/check-governance.py'
+      - '.github/workflows/governance-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-governance:
+    name: Validate declared repository governance
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout candidate
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run bounded local checks
+        run: python3 scripts/check-governance.py
