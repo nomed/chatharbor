@@ -27,7 +27,7 @@
 | Capability | Declared | Observed / enforced |
 | --- | --- | --- |
 | Repository context (`AGENTS.md`, manifest, ADR/RFC) | Proposed | Files in draft PR; no official status report |
-| Issue governance / GitHub Project Work Type | Proposed | Not configured; `authorizedProjects=[]` |
+| Issue governance / GitHub Project Work Type | Proposed | Selected `nomed/7` in draft manifest; fields and native hierarchy unverified |
 | Product-to-Engineering traceability | Proposed | Work graph only; no native issue hierarchy |
 | Context routing | Deferred | Not operational |
 | Atomic claims and protected orphan registry | Deferred | Disabled |
@@ -47,7 +47,7 @@
 ## Evidence gaps
 
 - No official toolchain doctor, schema-validator receipt or adoption/status report has been produced.
-- No authorized Project and no native Work Type/parent hierarchy verified.
+- Project `nomed/7` selected by owner and recorded on draft branch; no Project API inspection, native Work Type/parent hierarchy or work-item mapping verified.
 - No protected coordination registry; no branch protections or PR gate qualification.
 - A public contributor cannot inspect the private upstream contracts; ChatHarbor's local rules remain usable independent of those private materials.
 
