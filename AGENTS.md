@@ -1,23 +1,24 @@
 # ChatHarbor agent entrypoint
 
-This repository is a **design-stage** iPhone-first privacy project. Never imply full automatic WhatsApp extraction or automatic rejoining of groups.
+**Status:** design-stage project. Do not claim full continuous WhatsApp capture or automatic group rejoining.
 
-## Authority and context
+## Public, self-contained operating contract
 
-Read `.context/manifest.yaml` first, then only task-relevant accepted decisions, RFCs, architecture, and the governing GitHub issue/PR. GitHub work items own live planning and execution state; the repository owns accepted engineering decisions. Follow the upstream Nomed Golden Path selected and pinned in `.context/standards/golden-path.md`.
+Read `.context/manifest.yaml`, `.context/standards/golden-path.md` and only relevant project sources for the task. Public contributors need **no access** to private `nomed/golden-path` or `retex-iconic/golden-path`. The upstream snapshot is pinned for provenance in the local standard; upstream private text and runtime checks are not prerequisites for ordinary contributions.
 
-## Working rules
+1. Current human instruction takes precedence; accepted decisions/RFCs outrank proposed work.
+2. Source, tests and validated behavior are the implementation authority; GitHub Issues/PRs are live work state.
+3. Additive work must have explicit scope, acceptance criteria, evidence and review. User-facing changes require Product → Engineering traceability once the configured connector supports native parent and Work Type.
+4. Follow project privacy boundaries: **never** commit chat exports, invitation URLs, private phone numbers, secrets, or user data to GitHub or its website.
+5. Prefer documented iOS user-initiated sharing, never unsupported WhatsApp automation or ban circumvention.
+6. Preserve unmodified original archive files; flag unverified or truncated extraction.
+7. Independently tested Vault export/restore is an MVP requirement.
+8. Do not claim claims/branch registration, CI enforcement, a selected Project, development/main integration or formal Golden Path compliance until verified and explicitly activated.
 
-- Keep chat exports, private contacts, invitation URLs, recovery keys and personal data out of Git, issues, logs and GitHub Pages.
-- Use official user-initiated import mechanisms; do not automate unofficial WhatsApp access or bypass platform restrictions.
-- Do not treat a proposed RFC or ADR as accepted.
-- Do not activate claims, branch registry, `development` integration, Project-owned fields, or enforcement by writing configuration alone.
-- For material user-facing behavior changes, preserve Product `Outcome → Bet → Initiative` traceability in the authoritative work system when the GitHub connector is configured.
-- No direct integration/promotion claim, CI qualification, security assertion or implementation readiness without recorded evidence.
+## Task-specific reading
 
-## Starting points
-
-- [Project architecture](docs/architecture.md)
-- [Product context](.context/product/product-brief.md)
-- [Proposed RFC](.context/rfcs/RFC-0001-chatharbor-v1.md)
-- [Adoption plan](.context/standards/golden-path.md)
+- [Architecture](docs/architecture.md)
+- [Product intent](.context/product/product-brief.md)
+- [Proposed product RFC](.context/rfcs/RFC-0001-chatharbor-v1.md)
+- [Local Golden Path adoption plan](.context/standards/golden-path.md)
+- [Proposed iOS baseline](.context/standards/ios-engineering.md)
