@@ -56,7 +56,7 @@ struct ArchiveView: View {
                     Text("An export is not a verified backup. Run the independent restore tool on another computer.")
                 }
                 Section("Group recovery") {
-                    Text("The versioned registry model is available in the core. Registry editing and manual contact verification UI are tracked in issue #11.")
+                    Text("Group contact editing is not available in this preview. Group recovery will require your own independently verified contacts and manual steps.")
                 }
             }
             .navigationTitle("ChatHarbor Preview")

@@ -21,3 +21,7 @@ An Xcode project, test runner, CI workflow and passing receipts do **not yet exi
 ## Deployment boundary
 
 The public GitHub Pages site is documentation-only. It does not ingest messages, contacts, group invitations or Vault archives. App signing/distribution will be addressed by a separate RFC or accepted ADR.
+
+## Executable qualification update — 2026-11-07
+
+PR #17 introduces the Swift package, test runner, XcodeGen app/Share Extension definition and macOS CI. The qualification candidate selects Xcode 26.0, Swift 6 language mode and provisional iOS 17. See [iOS preview](../../ios/README.md) and [delivery controls](engineering-delivery.md). Earlier “does not yet exist” statements describe the baseline before this PR. Only exact-head CI receipts establish build/test coverage; real-device compatibility, signing and security gates remain open.

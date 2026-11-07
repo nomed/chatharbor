@@ -26,11 +26,15 @@ final class ShareViewController: UIViewController {
                     let total = try existing.reduce(0) { sum, url in sum + (try url.resourceValues(forKeys: [.fileSizeKey]).fileSize ?? 0) }
                     guard existing.count < 16, total + bytes.count <= 128 * 1024 * 1024 else { throw CocoaError(.fileWriteOutOfSpace) }
                     let suffix = type == UTType.zip.identifier ? "zip" : "txt"
-                    let target = inbox.appendingPathComponent(UUID().uuidString).appendingPathExtension(suffix)
-                    try bytes.write(to: target, options: [.atomic, .completeFileProtection])
-                    var excluded = target
+                    let identifier = UUID().uuidString
+                    let pending = inbox.appendingPathComponent(identifier).appendingPathExtension("pending")
+                    let target = inbox.appendingPathComponent(identifier).appendingPathExtension(suffix)
+                    defer { try? FileManager.default.removeItem(at: pending) }
+                    try bytes.write(to: pending, options: [.atomic, .completeFileProtection])
+                    var excluded = pending
                     var attributes = URLResourceValues(); attributes.isExcludedFromBackup = true
                     try excluded.setResourceValues(attributes)
+                    try FileManager.default.moveItem(at: pending, to: target)
                     success = true
                 } catch { /* Never log source paths or chat content. */ }
             }

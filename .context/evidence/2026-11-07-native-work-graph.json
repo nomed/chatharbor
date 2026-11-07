@@ -188,5 +188,10 @@
     }
   ],
   "nativeParentsVerified": 14,
-  "nativeDependenciesVerified": 6
+  "nativeDependenciesVerified": 6,
+  "ownershipVerified": {
+    "assignee": "nomed",
+    "count": 15,
+    "projectOwningTeam": "not populated: access blocked"
+  }
 }

@@ -52,3 +52,7 @@
 - A public contributor cannot inspect the private upstream contracts; ChatHarbor's local rules remain usable independent of those private materials.
 
 **Never describe configuration presence as an enabled and enforced Golden Path.**
+
+## Operational kickoff update — 2026-11-07
+
+PR #1 is merged. The native work graph now exists (#2–#16): 14 parent links, 6 dependencies and 15 nomed assignees were read back. Earlier table entries describe the pre-kickoff snapshot. Intended issue-body types do not replace blocked Project Work Type classification. The current detailed matrix is in [kickoff evidence](../evidence/2026-11-07-kickoff.md); [engineering delivery](engineering-delivery.md) applies this Golden Path to the iOS qualification branch. Claims, registration and integration/promotion remain disabled. A draft iOS foundation PR is not full conformance or an accepted production baseline.
