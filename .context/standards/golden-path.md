@@ -1,36 +1,54 @@
-# Golden Path adoption — proposed
+# Golden Path adoption profile — ChatHarbor
 
-**Status:** Proposed; configuration is not activation.
+**Status:** Proposed · **Date:** 2026-11-07
 
-## Source and precedence
+## Immutable provenance
 
-Source repository: `nomed/golden-path` (accessible, private). Upstream scope decision identifies `retex-iconic/golden-path` as canonical. Pin the reviewed upstream **commit SHA** before importing execution tooling or claiming conformance. Do not rely on a moving `main`.
+- Canonical owner per upstream scope decision: `retex-iconic/golden-path`.
+- Mirror consulted: `nomed/golden-path`.
+- Reviewed snapshot: `7d4d17ad2aff5bbb9eddc688ec9b4bd46c11e316` (same Git commit observed in both repositories).
+- Both source repositories are **private** as of this review. Access to them is *not* a prerequisite for a public ChatHarbor contribution.
+- This document and `AGENTS.md` carry the **self-contained local operating rules**. This repository does not redistribute upstream source code or pretend to embed a complete Golden Path release.
+- Upstream tools, exact schemas, Project provisioning, and formal status reports are **not available to anonymous contributors**. Maintainers must provide an accessible licensed distribution or execute those checks in a protected environment and publish sanitized receipts before claiming formal conformance.
 
-## Selected initial scope
+## Public contribution contract
 
-1. Repository Context System (`AGENTS.md`, `.context/manifest.yaml`): **proposed bootstrap**.
-2. Repository Issue Governance v3 with GitHub Project-owned Work Type, native parent hierarchy and body-backed state: **planned, not operational**.
-3. Product → Engineering decision ownership and traceability: **apply for new capabilities once connector is validated**.
-4. Context Router and Output Economy: **instructions only; no measured enforcement yet**.
-5. iOS engineering baseline: **local adaptation required**; the upstream golden path has Java/Go examples but no certified Swift/iOS binding.
+1. Repository source code, application tests and source control establish implemented behavior.
+2. Accepted ADRs and RFCs establish durable technical choices. Proposed records do not bind.
+3. GitHub Issues/PRs establish live work and review state, not accepted architecture.
+4. User-facing capability changes require Product decision ownership and traceability: Outcome → Bet → Initiative → Engineering work. Engineering-only maintenance can have a dedicated technical root.
+5. Use scoped, reviewable PRs. Never merge an unreviewed PR or rewrite an accepted decision in place. Do not self-claim a passing gate.
+6. Never upload actual chat exports, contact data, group invite links, keys or secrets to public repository artifacts.
+7. Clearly distinguish implemented, proposed, tested and unsupported capabilities.
+8. Preserve user-generated archives and perform recovery testing before asserting loss resilience.
 
-## Deferred, disabled pending separate authorization and proof
+## Proposed adoption
 
-- Atomic execution claims and orphan protected `coordination/agent-claims` registry.
-- Work-branch registration and canonical worktree isolation enforcement.
-- `development` / `main` integration-promotion contract and branch protection.
-- Project field/view provisioning (requires an authorized Project and permissions).
-- Agent benchmarks, model routing, automated release claims.
+| Capability | Declared | Observed / enforced |
+| --- | --- | --- |
+| Repository context (`AGENTS.md`, manifest, ADR/RFC) | Proposed | Files in draft PR; no official status report |
+| Issue governance / GitHub Project Work Type | Proposed | Not configured; `authorizedProjects=[]` |
+| Product-to-Engineering traceability | Proposed | Work graph only; no native issue hierarchy |
+| Context routing | Deferred | Not operational |
+| Atomic claims and protected orphan registry | Deferred | Disabled |
+| Work-branch registration / worktree isolation enforcement | Deferred | Disabled |
+| `development → main` promotion | Deferred | Disabled |
+| Swift/iOS engineering baseline | Proposed | Documented locally; CI not yet qualified |
 
-## Rollout order
+## Validation and activation plan
 
-1. Review this PR and accept/revise RFC/ADR through a human decision.
-2. Pin a Golden Path source commit and validate the adopter manifests against upstream schemas.
-3. Select or create an authorized GitHub Project; inspect and plan field/view changes with the Golden Path connector.
-4. Create the Product work graph with persisted native hierarchy; validate issue-body ownership, readiness and evidence.
-5. Establish CI and protection prerequisites before enabling any branch or agent execution protocols.
-6. Run official Golden Path adoption/status reporting from a checked runtime and publish the actual receipts.
+1. Verify upstream pin and permission to distribute any selected subset; do not copy private policy text without authorization.
+2. Validate adopter manifests against matching upstream schemas in a trusted maintainer environment. Record exact command, dependency versions, source SHA, findings and limits.
+3. Choose and authorize a GitHub Project. Inspect Project-owned `Work Type`, hierarchy and field mapping before creating a canonical work graph.
+4. Run the official read-only Golden Path adoption/status report from the same pinned runtime, using the checked branch and repository.
+5. Establish Xcode / Swift tests and GitHub branch protection gates before enabling integration/promotion or agent execution claims.
+6. Document any intentional deviations, with owner and reevaluation condition.
 
-## Known gaps
+## Evidence gaps
 
-There is no verified Golden Path status report, connector preflight receipt, Project authority, pinned source SHA or CI enforcement yet. An unverified control must not be reported as active.
+- No official toolchain doctor, schema-validator receipt or adoption/status report has been produced.
+- No authorized Project and no native Work Type/parent hierarchy verified.
+- No protected coordination registry; no branch protections or PR gate qualification.
+- A public contributor cannot inspect the private upstream contracts; ChatHarbor's local rules remain usable independent of those private materials.
+
+**Never describe configuration presence as an enabled and enforced Golden Path.**
