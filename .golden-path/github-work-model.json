@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "connector": "golden-path.connector.github",
+  "connectorMajorVersion": 1,
+  "repository": "nomed/chatharbor",
+  "productValues": [
+    "chatharbor"
+  ],
+  "areaValues": [
+    "product",
+    "ios",
+    "archive",
+    "recovery",
+    "platform",
+    "security"
+  ],
+  "owningTeamValues": [
+    "chatharbor-maintainers"
+  ],
+  "enabledProperties": [
+    "product",
+    "area",
+    "impact",
+    "priority",
+    "owning_team",
+    "health"
+  ],
+  "canonicalScopes": [
+    "platform",
+    "ios",
+    "archive",
+    "recovery",
+    "security"
+  ],
+  "allowRootBugs": true,
+  "authorizedProjects": [
+    "nomed/7"
+  ],
+  "executionClaims": {
+    "enabled": false,
+    "protocol": "git_atomic_claims_v1",
+    "registryBranch": "coordination/agent-claims",
+    "registryConcurrency": {
+      "semantics": "per_record_compare_and_swap",
+      "maximumPushAttempts": 3,
+      "disjointNonFastForwardRetry": true,
+      "targetRecordChangeFailsClosed": true,
+      "forcePushAllowed": false
+    }
+  },
+  "workBranchRegistration": {
+    "enabled": false,
+    "protocol": "work_branch_registration_v1",
+    "registryBranch": "coordination/agent-claims",
+    "registryConcurrencyPolicy": "executionClaims.registryConcurrency"
+  },
+  "integrationPromotion": {
+    "enabled": false,
+    "protocol": "integration_promotion_v1",
+    "integrationBranch": "development",
+    "primaryBranch": "main",
+    "workPrGate": "fast",
+    "workPrCandidateValidation": "current_merge_candidate",
+    "workPrFreshnessMode": "merge_queue_preferred_up_to_date_fallback",
+    "staleWorkPrCandidate": "invalidate_and_revalidate",
+    "workPrMergeStrategy": "history_preserving",
+    "workPrAllowedMergeMethods": [
+      "merge_commit"
+    ],
+    "workPrForbiddenMergeMethods": [
+      "squash",
+      "rebase"
+    ],
+    "promotionPrGate": "full",
+    "expectedDevelopmentHeadRequired": true,
+    "promotionMergeStrategy": "ancestry_preserving",
+    "promotionAllowedMergeMethods": [
+      "fast_forward",
+      "merge_commit"
+    ],
+    "promotionForbiddenMergeMethods": [
+      "squash",
+      "rebase"
+    ],
+    "promotedSourceMustBeAncestorOfPrimary": true
+  },
+  "compatibilityPrefixes": {
+    "product": false,
+    "engineering": true
+  },
+  "deviations": [],
+  "fieldAuthority": "project_owned",
+  "typeAuthority": "work_type_project_field",
+  "projectOwnedWorkModel": "connectors/github/project-owned-work-model.v1.json",
+  "strategicThemeValues": []
+}
