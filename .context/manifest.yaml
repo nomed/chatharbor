@@ -1,0 +1,56 @@
+schema_version: 1
+context_root: .context
+
+work_management:
+  system_of_record: github
+  live_work_state_in_context: false
+
+precedence:
+  - current_human_instruction
+  - accepted_decisions
+  - accepted_rfcs
+  - project_architecture_and_standards
+  - nearest_agents_md
+  - governing_work_item_and_pull_request
+  - latest_accepted_handoff
+  - sessions
+  - temporary_notes
+
+records:
+  decisions:
+    path: .context/decisions
+    id_pattern: "ADR-{number:04d}"
+    statuses: [Draft, Proposed, Accepted, Deprecated, Superseded, Rejected, Withdrawn]
+    immutable_after_acceptance: true
+  rfcs:
+    path: .context/rfcs
+    id_pattern: "RFC-{number:04d}"
+    statuses: [Draft, Proposed, Accepted, Deprecated, Superseded, Rejected, Withdrawn]
+    immutable_after_acceptance: true
+  evidence:
+    path: .context/evidence
+    authoritative: false
+
+context_routing:
+  convention: Context Router v1
+  enabled: false
+
+execution_claims:
+  enabled: false
+  registry_branch: coordination/agent-claims
+
+work_branch_registration:
+  enabled: false
+  registry_branch: coordination/agent-claims
+
+integration_promotion:
+  enabled: false
+  integration_branch: development
+  primary_branch: main
+
+write_policy:
+  decisions: proposal_allowed_human_acceptance_required
+  rfcs: draft_allowed_human_acceptance_required
+  accepted_record_material_rewrite: forbidden
+  destructive_operation_without_explicit_approval: forbidden
+  live_roadmap_state_in_context: forbidden
