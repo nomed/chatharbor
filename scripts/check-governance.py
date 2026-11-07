@@ -5,6 +5,7 @@ This is not the canonical Golden Path schema validator or adoption/status report
 """
 from __future__ import annotations
 import json
+import re
 from pathlib import Path
 import sys
 
@@ -28,6 +29,12 @@ require(manifest.get("fieldAuthority") == "project_owned", "field authority must
 require(manifest.get("typeAuthority") == "work_type_project_field", "type authority mismatch")
 require(manifest.get("projectOwnedWorkModel") == "connectors/github/project-owned-work-model.v1.json", "work model source mismatch")
 require(isinstance(manifest.get("authorizedProjects"), list), "authorizedProjects must be an array")
+if isinstance(manifest.get("authorizedProjects"), list):
+    projects = manifest["authorizedProjects"]
+    require(projects == ["nomed/7"], "selected Project must be nomed/7 until reviewed change")
+    for project in projects:
+        require(isinstance(project, str) and re.fullmatch(r"[^/]+/[0-9]+", project) is not None,
+                "Project must use owner/numeric-id format")
 for name in ("executionClaims", "workBranchRegistration", "integrationPromotion"):
     require(isinstance(manifest.get(name), dict), f"{name} must be an object")
     if isinstance(manifest.get(name), dict):
