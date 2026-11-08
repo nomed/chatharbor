@@ -1,30 +1,23 @@
-# Roadmap
+# Product sequencing
 
-**Design-stage roadmap — features below are not yet shipped.**
+Desktop-first direction approved for the prototype on 2026-11-08. This document describes dependencies, not live delivery status; GitHub issues and PRs are the work record.
 
-## Phase 0 — Feasibility and privacy
-- [ ] Test representative iPhone WhatsApp exports with and without media, across locales and long chats.
-- [ ] Record truncation, attachment and format limitations.
-- [ ] Define threat model, recovery expectations and privacy policy.
-- [ ] Validate iOS share-extension ingestion on supported iOS versions.
+## Foundation
 
-## Phase 1 — Independent archive
-- [ ] Build SwiftUI app shell and iOS share extension.
-- [ ] Keep immutable source exports; generate checksums and manifests.
-- [ ] Parse chat timeline and media with warnings on uncertain completeness.
-- [ ] Search and view archived content offline.
+Rust/Tauri + React desktop shell with a synthetic verifiable archive, source-text viewer/search and read-only recovery registry. Target builds: macOS, Windows and Linux. Browser preview shares the UI; it is not a deployed PWA or USB acquisition solution. See [desktop guide](../desktop/README.md) and RFC-0002.
 
-## Phase 2 — Group continuity
-- [ ] Group and community registry, external administrator contacts and role records.
-- [ ] User-entered invitation links with protected storage.
-- [ ] Recovery readiness diagnostics and periodic verification reminders.
-- [ ] Guided new-number rejoin workflow, with administrator approval where needed.
+## Acquisition feasibility
 
-## Phase 3 — Backup reliability
-- [ ] Optional encrypted, versioned cloud replicas.
-- [ ] Export / restore the independent ChatHarbor vault.
-- [ ] Integrity audits and restore drills.
-- [ ] Optional desktop-assisted backup adapter, explicitly separated from iPhone-only flow.
+Qualify iPhone/Mac backup acquisition without manual Finder operation, with explicit trust, encryption and interruption tests. Distinguish host-side retention filters from actual bytes transferred. Qualify Android backup/media acquisition via ADB separately. Manual per-chat export remains a fallback. Swift PR #17 remains a preserved experiment, not the primary delivery path.
 
-## Gate
-No promise of complete automated WhatsApp backup or automatic group recovery without a documented, supported integration.
+## Parsing and archive
+
+Decide licenses before incorporating GPL components. Introduce a reviewed Python adapter if approved; port behaviors to Rust only with differential fixtures for platform/database versions, media, incremental snapshots and missing data. Preserve originals and manifests; add persistent catalog, message reconstruction and media viewing without implying complete history.
+
+## Group continuity and independent recovery
+
+Add registry editing, independently reachable administrator contacts, private invitation handling, staleness review and manual recovery instructions. Implement externally stored encrypted copies and prove recovery without the original phone/account. Cloud providers and continuous synchronization are optional; an independent recoverable copy is not.
+
+## Gates
+
+No store, paid account or hosted service required for the local prototype. Unsigned distribution, OS/device compatibility, security, licensing, encrypted recovery and physical-device evidence require explicit qualification. No automatic group membership recovery or unsupported live WhatsApp extraction. Project #7 field/view activation remains separate from application implementation.
