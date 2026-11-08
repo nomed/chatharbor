@@ -1,0 +1,13 @@
+# Build output and local dependencies
+node_modules/
+dist/
+target/
+playwright-report/
+test-results/
+/src-tauri/gen/
+/desktop/src-tauri/gen/
+.DS_Store
+.env
+*.vault
+*.recovery-key
+__pycache__/

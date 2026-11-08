@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-window",
+  "description": "Local archive preview. No shell, filesystem, USB, network or updater plugins.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

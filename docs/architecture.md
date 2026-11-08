@@ -1,3 +1,19 @@
+# ChatHarbor architecture — desktop-first prototype
+
+Status: Proposed design; scoped execution approved by owner on 2026-11-08. RFC-0002/ADR-0006 record current direction.
+
+The primary delivery is a free local macOS/Windows/Linux app: React/TypeScript UI in Tauri, Rust archive core, replaceable acquisition/parser adapters. The browser preview shares presentation; standalone web cannot acquire iPhone backups. The Swift Share Extension design below is retained as historical context and a possible future companion, not the primary MVP.
+
+Current implemented slice: verified synthetic JSON archive, raw UTF-8 original viewer/search, read-only registry and SHA-256 inspection. No USB acquisition, Python bridge, encryption, persistent catalog or release installer is implemented. See [desktop guide](../desktop/README.md).
+
+Planned path: authorized device backup → immutable snapshot → verified originals/catalog → external encrypted copy → independent restore. Native backup compatibility and WhatsApp-only retention/transfer semantics require physical-device evidence. Group recovery remains manual contact planning, not membership restoration.
+
+The existing Golden Path applies unchanged; live work remains in GitHub, not this document. No sensitive protection/registry/promotion activation. No real personal data or GPL implementation is copied into the public repo.
+
+---
+
+## Historical iOS-first design
+
 # ChatHarbor architecture — draft
 
 **Status:** Proposed · **Audience:** implementers and reviewers
