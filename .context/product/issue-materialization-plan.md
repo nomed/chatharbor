@@ -1,3 +1,9 @@
+# Historical kickoff materialization proposal
+
+The sequence below records the original 2026-11-07 plan. The native graph has since been created and extended; live work belongs in GitHub. Desktop-first direction from 2026-11-08 is RFC-0002; native tasks #18–#21 reuse the existing parents. The original iOS-first items are preserved as historical scope, not instructions to duplicate issues or continue Swift as the primary delivery path. Project-owned field activation remains blocked by #15.
+
+---
+
 # Proposed issue materialization sequence
 
 **Planning only.** Do not submit this file as live governance state.

@@ -1,0 +1,52 @@
+{
+  "formatVersion": 1,
+  "files": {
+    "Porto - gruppo sintetico.txt": "WzIwMjYtMTEtMDEgMDk6MzBdIE1hcnRhOiBJbCBwdW50byBkaSBpbmNvbnRybyDDqCBpbCBmYXJvLgpbMjAyNi0xMS0wMSAwOTozMV0gTHVjYTogUmljZXZ1dG8sIHBvcnRvIGxhIG1hcHBhLgpbMjAyNi0xMS0wMSAwOTozMl0gTWFydGE6IFF1ZXN0YSBjb252ZXJzYXppb25lIMOoIGludGVyYW1lbnRlIHNpbnRldGljYS4K",
+    "Elena - conversazione sintetica.txt": "WzIwMjYtMTEtMDIgMTQ6MDBdIEVsZW5hOiBIYWkgdmVyaWZpY2F0byBsYSBjb3BpYSBlc3Rlcm5hPwpbMjAyNi0xMS0wMiAxNDowMl0gVHU6IFByaW1hIGNvbnRyb2xsbyBnbGkgaGFzaCwgcG9pIHByb3ZvIGlsIHJpcHJpc3Rpbm8uCg==",
+    "nota-sintetica.txt": "U29sbyBkYXRpIGRpbW9zdHJhdGl2aS4gTmVzc3VuIG1lc3NhZ2dpbyByZWFsZSBlIG5lc3N1biBjb2xsZWdhbWVudG8gYSBncnVwcGkuCg=="
+  },
+  "manifest": [
+    {
+      "path": "Elena - conversazione sintetica.txt",
+      "byteCount": 133,
+      "sha256": "8f4557df8058aa873b8d1256bc445e1aef6889c5fe4876f6eaba520f943213b2"
+    },
+    {
+      "path": "Porto - gruppo sintetico.txt",
+      "byteCount": 183,
+      "sha256": "75ef19ea013011d288a1c6721fb70e179fc3fa361e12346b75cc1f79c272e659"
+    },
+    {
+      "path": "nota-sintetica.txt",
+      "byteCount": 79,
+      "sha256": "25fe5367582f90afd912f98fa68cb44ba22eaf1b074dffac119f011377c2ce4c"
+    }
+  ],
+  "warnings": [
+    "Archivio dimostrativo: nessun dato personale reale.",
+    "La verifica SHA-256 conferma i byte conservati, non la completezza della cronologia WhatsApp.",
+    "I backup iPhone, Android e i Vault cifrati non sono ancora importabili in questa preview."
+  ],
+  "registry": {
+    "formatVersion": 1,
+    "groups": [
+      {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "name": "Porto · gruppo sintetico",
+        "community": "Comunità dimostrativa",
+        "role": "member",
+        "contacts": [
+          {
+            "displayName": "Marta (contatto sintetico)",
+            "independentChannel": "marta@example.invalid"
+          }
+        ],
+        "lastVerifiedAt": "2026-11-01T12:00:00Z",
+        "manualRecoverySteps": [
+          "Contattare l’amministratrice fuori da WhatsApp.",
+          "Richiedere un invito nel rispetto delle regole del gruppo."
+        ]
+      }
+    ]
+  }
+}

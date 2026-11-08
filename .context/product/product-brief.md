@@ -23,3 +23,7 @@ An independent archive does not guarantee all messages, full media history, or r
 - What are actual user expectations for what is and is not recoverable?
 - What storage/cipher options can be implemented entirely on iPhone?
 - What personal-data protections and consent model are required for third-party conversations?
+
+## Desktop-first direction — 2026-11-08
+
+Owner devices: iPhone and Mac. Product constraint: zero software/store/cloud spend. Primary acquisition hypothesis is local device backup, not manual per-chat export; qualify it before promising completeness. Target desktop platforms are macOS/Windows/Linux, with shared React UI and a Rust host plus replaceable parsing/acquisition. Native Swift PR #17 remains an isolated spike. Browser access is a later companion for existing archives. See RFC-0002 for scope and explicit gates. Outcome and independent encrypted recovery requirements remain unchanged.

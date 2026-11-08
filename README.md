@@ -4,7 +4,7 @@
 <p align="center">An open-source, privacy-first project for preserving communication history and preparing to rebuild connections after account loss.</p>
 <p align="center"><a href="https://nomed.github.io/chatharbor/">Project website</a> · <a href="./docs/architecture.md">Architecture</a> · <a href="./docs/roadmap.md">Roadmap</a> · <a href="https://github.com/nomed/chatharbor/issues">Issues</a></p>
 
-> **Project status: design / pre-MVP.** ChatHarbor is not yet a functioning iOS backup application. It cannot automatically capture all WhatsApp messages or restore group membership after a ban.
+> **Project status: desktop-first prototype / pre-MVP.** ChatHarbor is not yet a functioning iOS backup application. It cannot automatically capture all WhatsApp messages or restore group membership after a ban.
 
 ## What we are building
 
@@ -19,7 +19,7 @@ WhatsApp's official iCloud backup is useful for conventional restoration, but do
 
 ## MVP approach
 
-**iPhone-first, local-first**. Users export chats using WhatsApp's supported sharing flow. An iOS share extension imports them; a separate recovery registry stores user-provided group and contact information. Originals and manifests remain portable. Cloud replication is optional and explicitly configured.
+**Desktop-first, local-first** on macOS, Windows and Linux. The owner-approved direction is Rust/Tauri + React, with replaceable device-backup acquisition and parsing adapters. The first executable slice opens verified synthetic archives; phone acquisition, Python integration, persistent encrypted storage and independent recovery are separate gates. Manual chat exports remain a fallback and the Swift work in PR #17 remains a preserved spike. No paid accounts, store publication or hosted processing are required for the prototype.
 
 See [architecture](./docs/architecture.md), [roadmap](./docs/roadmap.md), and [security](./SECURITY.md).
 
@@ -29,7 +29,7 @@ ChatHarbor uses the official Nomed circular mark with its product accent **Harbo
 
 ## Contributing
 
-Project is in early design. Please use [issues](https://github.com/nomed/chatharbor/issues) for requirements, threat models, compatibility tests and implementation proposals. Never attach real chat exports or private invitation links to public issues.
+Project is in prototype development. Please use [issues](https://github.com/nomed/chatharbor/issues) for requirements, threat models, compatibility tests and implementation proposals. Never attach real chat exports or private invitation links to public issues.
 
 ## License
 
@@ -37,3 +37,7 @@ MIT — see [LICENSE](./LICENSE). The Nomed name and brand artwork are not grant
 
 ---
 Built under [Nomed](https://nomed.github.io/). Not affiliated with WhatsApp or Meta.
+
+## Desktop preview
+
+See [desktop/README.md](desktop/README.md) for local browser/native startup and tests. The app opens a synthetic archive, verifies SHA-256 and previews source text plus the recovery registry. It does not yet acquire phone backups or open encrypted Vaults. [RFC-0002](.context/rfcs/RFC-0002-desktop-first.md) and [ADR-0006](.context/decisions/ADR-0006-desktop-boundaries.md) record the desktop direction and GPL integration gate. MIT remains unchanged; third-party GPL components are not bundled. The public GitHub Pages site remains documentation-only.
